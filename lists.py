@@ -10,12 +10,12 @@ print(x[1])
 
 
 # Working with the 'for' loop
-#for i in x: #The 'i' is a varible. The loop will pass a value from the list 'x' to 'i'
+for i in x: #The 'i' is a varible. The loop will pass a value from the list 'x' to 'i'
     print(i) #Prints  the current value of 'i'
 # Will only loop for as many items in the list until the list runs out, from first to last
 
 
-#length = len(x) #The len fuinction here is counting the number of items in the list
+length = len(x) #The len fuinction here is counting the number of items in the list
 print(length)
 
 mylist = [1, 2, 6, 7, 9, 0, 2, 4, 5]
