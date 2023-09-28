@@ -38,3 +38,39 @@ names = ["John", "Sally", "Sam"]
 names[2] = "Chris" #The value of "Sam" was replaced by "Chris"
 print(names)
 
+names.remove("Chris") #The Remove() will remove an item named in the function
+                    # of "Chris" is gone. You cannot pass the value you remove to a variable
+                    # Pass the value to a variable before it is removed
+print(names)
+
+names.append("Sam") #adds the value in the () to the end of the list
+print(names)
+
+names.insert(10,"Keith") # This inserts a value at the specific index position in the list
+                        # The 1st Value must be in the index position and the 2nd is the item
+print(names)
+pos1 = names.index("Keith") #  index that acceeds the list, it will assign it to the end (for this it's the 3rd)
+print(pos1)
+
+print(names)
+names.sort() # Capitalized words come first in the sort (but I already made mine all caps, so they are alphabetized
+print(names)
+names.sort(reverse = True) # Preforms a reverse sort
+print(names)
+
+names.sort(key = str.lower) # Sorts by strict alphabetic rules
+print(names)
+
+# mylist = [1, 2, 6, 7, 9, 0, 2, 4, 5]
+
+del mylist[4] #Deletes the item according to the index position noted
+print(mylist)
+
+print(mylist) #This shows the items are they are in the list
+mylist.sort()
+print(mylist) #This shows the sorted list
+
+mixedList = ["john","sally","sam","Larry","Mary","1","2"]
+mixedList.sort() # String numbers get sorted first, followed by capitalized names
+                    # followed by lower case names
+print(mixedList)
