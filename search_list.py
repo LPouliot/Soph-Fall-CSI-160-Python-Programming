@@ -14,7 +14,7 @@ def searchlist(guess):
     if(count > 0):
         print("The letter", guess, "was found", count,"times")
         print("The index position(s) of the letter are located at:")
-        for idx, i in enumerate(letters):
+        for idx, i in enumerate(letters): #We went over it in the meeting, where this finds the index(s) easily 
             if i == guess:
                 print(idx)
     elif(count == 0):
@@ -22,4 +22,3 @@ def searchlist(guess):
     else:
         print("The letter was not found")
 searchlist(guess)
-
