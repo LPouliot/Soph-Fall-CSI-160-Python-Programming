@@ -2,15 +2,14 @@
 
 course = {} #Empty Dictionary
 
-# courses = {'key':'value'} # All Keys must be unique. If not, then data is overwritten
+courses = {'key':'value'} # All Keys must be unique. If not, then data is overwritten
 
 courses = {'CSI-160':'Intro To Python','CSI-260':'adv.Python', 'CSI-300':'Integer data'}
 
-# print(courses)
-# print(courses.keys())
-# print(courses.values())
+print(courses)
+print(courses.keys())
+print(courses.values())
 
-"""
 # Using a loop to extract keys
 for keys in courses.keys():
     print(keys)
@@ -21,7 +20,7 @@ for values in courses.values():
 
 for key,value in courses.items():
     print("The key is", key, "and the value is", value)
-"""
+
 # A valid dictionary structure that includes a list
 grades = {'course':'CIS-160-01: Intro to Python','Students':['John','Mary'],'x':3}
 
