@@ -80,3 +80,13 @@ print(dict(sorted(courses.items()))) # sorts the dictionary by key
 print(dict(sorted(courses.items(), key=lambda item: item[1]))) # sorts the dictionary by values
 addToDictionary()
 
+def addToDiction():
+    for keys,values in courses.items():
+        k = input("Key: ")
+        v = input("Value: ")
+        if k == 'CSI-160' and v == 'Intro to Python':
+            print("The course exists.", k, v)
+        else:
+            print("The course does not exist")
+            
+addToDiction()
