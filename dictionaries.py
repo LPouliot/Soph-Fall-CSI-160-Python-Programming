@@ -47,5 +47,36 @@ def addToDictionary():
         else:
             print("The course does not exist")
 
+# working with courses = {'CSI-160':'Intro To Python','CSI-260':'adv.Python', 'CSI-300':'Integer data'}
+
+print(courses)
+courses.update({'CSI-400':'A great course'}) #adds a dictionary item to the dictionary
+print(courses)
+courses.update({'CSI-400':'Software Engineering'}) # This updates the value of a key
+print(courses)
+courses['CSI-420'] = 'More Engineering' # adds the key and its value into a dictionary
+print(courses)
+courses['CSI-260'] = 'Advanced Python'
+print(courses)
+# Adding and is easy, but making a mistake can lead to this and screwing up the list
+courses['CSI-2600'] = 'Advanced Python'
+print(courses)
+
+del courses['CSI-2600'] # Deletes the entire item (keys and values) - It's gone FOREVER
+print(courses)
+key = input("Enter the key do delete: ") # To get the key instead of the value
+item = courses.pop(key) # This will let you store a value, not a key, in a variable
+print(item)
+print(courses)
+print(key)
+print(item)
+
+# Restoring deleted data, provided you have already properly saved it
+courses[key] = item
+print(courses)
+
+print(dict(sorted(courses.items()))) # sorts the dictionary by key
+
+print(dict(sorted(courses.items(), key=lambda item: item[1]))) # sorts the dictionary by values
 addToDictionary()
 
