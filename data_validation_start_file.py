@@ -1,4 +1,3 @@
-
 var = "Here is some string data with the number two in it."
 pswd = "asd213#!sd09"
 num = 23423 # Is not a string value so the is methods will not work, as they only work with string
@@ -64,44 +63,42 @@ Password Validation:
 - At least one special character
 - At least one number
 """
-
-"""
-"8 - 12 Characters"
-"At least one uppercase letter"
-"At least one lowercase letter"
-"At least one special character"
-"At least one number"
-"      "
-"Valid Special Characters: #, !, *, %"
-"""
 def pswd_validator():
     print( "Password Validation")
+    print("It must have:")
+    print("More than 8 characters")
+    print("At least one uppercase letter")
+    print("At least one lowercase letter")
+    print("At least one special character")
+    print("At least one number")
+    print("Valid Special Characters: #, !, *, %")
+    print("     ")
     chars = ['#', '!', '*', '%']
-    upltr = False
-    lowltr = False
+    upper = False
+    lower = False
     num = False
     special = False
 
     pswd = input("Please input your password: ")
     count = len(pswd)
-    if count <8 or count >12:
-        print("Please be sure to enter 8 to 12 characters")
+    if count < 8:
+        print("Please be sure to enter more than 8")
         pswd_validator()
     else:
         for j in pswd:
             if j.isupper():
-                uptlr = True # Reassigns the variable a new value
+                upper = True # Reassigns the variable a new value
             elif j.islower():
-                lowtlr = True
+                lower = True
             elif j.isdecimal():
                 num = True
             elif j in chars:
                 special = True
             else:
                 continue
-
-    if upltr == True and lowltr == True and num == True and special == True:
+    if upper == True and lower == True and num == True and special == True:
         print("Valid Password")
+        exit() # Prevents the execution of code that follows the command
     else:
         print("Process Failed")
         pswd_validator()
