@@ -37,7 +37,7 @@ with open('test.txt', 'r') as f:
     content = f.read(5) # This method takes a parameter to limit the output (num of characters)
     print(content)
 '''
-
+'''
 with open('test.txt', 'r') as f:
     max = 10 # limits the number of characters to output from the file
     f.seek(0) # sets the cursor at the beginning og the file
@@ -47,11 +47,15 @@ with open('test.txt', 'r') as f:
         t =f.tell() # Identify the current position of the cursor
         print(t)
         contents = f.read(max) # this sets the loop to run the next 10 characters
-
+'''
 '''
 f.tell() - identifies the position of the cursor in the file
 f.seek() - this sets the position of the cursor in a file 
 '''
 
-
-
+with open('test.txt', 'r') as fp: # fp as file handler (file process) can be anything though
+    contents = fp.readlines() # readlines is the more functional way to get the data out
+    # print(contents[1:3][0]) # [0] gets rid of the list brackets
+    contents_final = contents[1:3]
+    for i in contents_final:
+        print(i)
