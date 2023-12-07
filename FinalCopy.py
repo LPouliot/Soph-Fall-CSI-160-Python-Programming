@@ -1,45 +1,3 @@
-"""
-Author: Lily
-Class: CSI-160-01
-Assignment: Final Project
-Due Date: 12/6/23
-
-Certification of Authenticity:
-I certify that this is entirely my own work, except where I have given
-fully-documented references to the work of others. I understand the definition
-and consequences of plagiarism and acknowledge that the assessor of this
-assignment may, for the purpose of assessing this assignment:
-- Reproduce this assignment and provide a copy to another member of academic
-- staff; and/or Communicate a copy of this assignment to a plagiarism checking
-- service (which may then retain a copy of this assignment on its database for
-- the purpose of future plagiarism checking)
-"""
-
-"""
-To get everything started and can cycle back here when the game is over
-"""
-def the_welcome():
-    print("Welcome to The Manor Game!")
-    ready = input("Ready to play the game? (y/n): ")
-    if(ready == 'y'):
-        the_plot()
-    else:
-        print("Okay Goodbye")
-
-"""
-To address the plot and makes sure the user is ready to play
-"""
-def the_plot():
-    print("You are a detective who works for a small town.\n"
-    "The department sends you out to a manor living on the outskirts of town to solve a case.\n"
-    "You are tasked to find the person who killed the owner of the mansion.\n"
-    "When ready, you can exit the house and enter your guess of who the killer was.")
-    start = input("Type start when you are ready: ")
-    if(start == 'start'):
-        the_beginning()
-    else:
-        print("Please try again")
-        the_plot()
 
 """
 Gives the user the options on where to go
@@ -127,9 +85,6 @@ def living_room(itemsInBag):
                 living_room(itemsInBag)
             else:
                 continue
-        else:
-            print("Try again")
-            living_room(itemsInBag)
 
         if (num1 == '2'):
             print("There wasn't anything useful near the furniture.\n"
@@ -140,9 +95,6 @@ def living_room(itemsInBag):
                 living_room(itemsInBag)
             else:
                 continue
-        else:
-            print("Try again")
-            living_room(itemsInBag)
 
         if (num1 == '3'):
             print("The Butler seemed busy watering the plants near the windowsill before focusing on you.")
@@ -155,9 +107,6 @@ def living_room(itemsInBag):
                 living_room(itemsInBag)
             else:
                 continue
-        else:
-            print("Try again")
-            living_room(itemsInBag)
 
         if (num1 == '4'):
             print("A beautiful mahogany ottoman sits on the wall beside the main entrance.\n"
@@ -185,9 +134,6 @@ def living_room(itemsInBag):
                 print("You should probably find that code")
                 print(" - - - - ")
                 living_room(itemsInBag)
-        else:
-            print("Try again")
-            living_room(itemsInBag)
 
         if (num1 == '5'):
             print("You exit the room")
@@ -223,8 +169,6 @@ def the_kitchen(itemsInBag):
                 the_kitchen(itemsInBag)
             else:
                 continue
-        else:
-            continue
 
         if (num2 == '2'):
             print("The chef lowered the knife before turning her attention to you.\n"
@@ -236,8 +180,6 @@ def the_kitchen(itemsInBag):
                 the_kitchen(itemsInBag)
             else:
                 continue
-        else:
-            continue
 
         if (num2 == '3'):
             print("The Cabinets on the far end of the kitchen held a few bottles that were labeled,\n"
@@ -253,15 +195,13 @@ def the_kitchen(itemsInBag):
                     the_kitchen(itemsInBag)
                 else:
                     continue
-        else:
-            continue
 
         if (num2 == '4'):
             print("You exit the room")
             the_beginning()
         else:
-            continue
-
+            print("Try again")
+            the_kitchen(itemsInBag)
 
 """
 The user has to use the code in order to enter the actual bedroom
@@ -319,8 +259,6 @@ def real_bedroom(itemsInBag):
                 print("You left the very nice hat alone")
                 print(" - - - - ")
                 real_bedroom(itemsInBag)
-        else:
-            continue
 
         if (num3 == '2'):
             print("The widow silently sat in the felted armchair, her face wrinkled from age and sorrow.\n"
@@ -333,8 +271,6 @@ def real_bedroom(itemsInBag):
                 real_bedroom(itemsInBag)
             else:
                 continue
-        else:
-            continue
 
         if (num3 == '3'):
             print("You made your way over to the wooden desk with a thin polished stone plate as decoration.\n"
@@ -373,14 +309,14 @@ def real_bedroom(itemsInBag):
                 print("You left the paper alone")
                 print(" - - - - ")
                 real_bedroom(itemsInBag)
-        else:
-            continue
+
 
         if (num3 == '4'):
             print("You exit the room")
             the_beginning()
         else:
-            continue
+            print("Try again")
+            real_bedroom(itemsInBag)
 
 """
 Lets user enter a 'room' to explore and search for clues. There is a while loop embedded
@@ -422,8 +358,6 @@ def the_garden(itemsInBag):
                     the_garden(itemsInBag)
                 else:
                     continue
-        else:
-            continue
 
         if(num4 == '2'):
             print("After a bit of searching through all of the large plants, you were not able to find anything. \n"
@@ -434,8 +368,6 @@ def the_garden(itemsInBag):
                 the_garden(itemsInBag)
             else:
                 continue
-        else:
-            continue
 
         if(num4 == '3'):
             print("Through some extensive searching, you discovered a little space behind a few potted succulents.\n"
@@ -456,14 +388,14 @@ def the_garden(itemsInBag):
                 print("You left the code alone")
                 print(" - - - - ")
                 the_garden(itemsInBag)
-        else:
-            continue
+
 
         if (num4 == '4'):
             print("You exit the room")
             the_beginning()
         else:
-            continue
+            print("Try again")
+            the_garden(itemsInBag)
 
 
 """
