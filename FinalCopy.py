@@ -1,3 +1,45 @@
+"""
+Author: Lily
+Class: CSI-160-01
+Assignment: Final Project
+Due Date: 12/6/23
+
+Certification of Authenticity:
+I certify that this is entirely my own work, except where I have given
+fully-documented references to the work of others. I understand the definition
+and consequences of plagiarism and acknowledge that the assessor of this
+assignment may, for the purpose of assessing this assignment:
+- Reproduce this assignment and provide a copy to another member of academic
+- staff; and/or Communicate a copy of this assignment to a plagiarism checking
+- service (which may then retain a copy of this assignment on its database for
+- the purpose of future plagiarism checking)
+"""
+
+"""
+To get everything started and can cycle back here when the game is over
+"""
+def the_welcome():
+    print("Welcome to The Manor Game!")
+    ready = input("Ready to play the game? (y/n): ")
+    if(ready == 'y'):
+        the_plot()
+    else:
+        print("Okay Goodbye")
+
+"""
+To address the plot and makes sure the user is ready to play
+"""
+def the_plot():
+    print("You are a detective who works for a small town.\n"
+    "The department sends you out to a manor living on the outskirts of town to solve a case.\n"
+    "You are tasked to find the person who killed the owner of the mansion.\n"
+    "When ready, you can exit the house and enter your guess of who the killer was.")
+    start = input("Type start when you are ready: ")
+    if(start == 'start'):
+        the_beginning()
+    else:
+        print("Please try again")
+        the_plot()
 
 """
 Gives the user the options on where to go
